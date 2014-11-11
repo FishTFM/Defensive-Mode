@@ -51,6 +51,7 @@ Players = {
 	end;
 }
 
+-- Scoreboard object.
 Scoreboard = {
 	scores = {},
 	logs = {
@@ -73,11 +74,14 @@ Scoreboard = {
     end
 }
 
+-- Profilboard object.
 Profilboard = {
 }
 
+-- Defensers object.
 Defensers = {
 }
 
+-- FFA object.
 FFA = {
 }
