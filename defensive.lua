@@ -3,8 +3,8 @@
 --	Code by Fish (ThanosS)
 --------------------------------
 
--- Players object.
-Players = {
+-- Player object.
+Player = {
 	players = {},
 	init = function(self, name)
 		self.players[name] = { 
