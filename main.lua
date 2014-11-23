@@ -8,23 +8,23 @@ function eventChatCommand(name, command)
 end;
 
 function eventNewPlayer(name)
-	Players:init(name);
+	Player:init(name);
 end;
 
 function eventPlayerDied(name)
-	Players:incrementStat(name, "death", 1);
+	Player:incrementStat(name, "death", 1);
 end;
 
 function eventPlayerGetCheese(name)
-	Players:incrementStat(name, "cheese", 1);
+	Player:incrementStat(name, "cheese", 1);
 end;
 
 function eventPlayerWon(name)
 	Scoreboard:playerEnter(name);
-	Players:incrementStat(name, "hole", 1);
+	Player:incrementStat(name, "hole", 1);
 
 	-- TODO: Check firsts.
 	if Scoreboard:getPlace(name) < 4 then
-		Players:incrementStat(name, "points", 4 - Scoreboard:getPlace(name));
+		Player:incrementStat(name, "points", 4 - Scoreboard:getPlace(name));
 	end
 end;
