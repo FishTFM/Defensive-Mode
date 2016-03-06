@@ -24,7 +24,8 @@ function eventPlayerWon(name)
 	Player:incrementStat(name, "hole", 1);
 
 	-- TODO: Check firsts.
-	if Scoreboard:getPlace(name) < 4 then
-		Player:incrementStat(name, "points", 4 - Scoreboard:getPlace(name));
+	local playerPlace = Scoreboard:getPlace(name);
+	if playerPlace < 4 then
+		Player:incrementStat(name, "points", 4 - playerPlace);
 	end
 end;
